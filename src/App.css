@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+:root {
+    --primary-font: 'Montserrat', sans-serif !important;
+    --secondary-font: 'Mrs Saint Delafield', cursive;
+
+    --light-bg-color: #fff8f2;
+
+    --btn-primary: #595c69;
+    --btn-accent: #ffbf9d;
+
+    --first-color: #fff8f2;
+    --second-color: #ffbf9d;
+    --third-color: #eaeaea;
+    --fourth-color: #9fa1aa;
+    --fifth-color: #595c69;
+    --sixth-color: #303036;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--primary-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    color: var(--sixth-color);
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link {
+    font-family: var(--primary-font);
+    color: var(--fifth-color);
+    margin: 0 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-toggler-icon {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link:hover {
+    color: var(--sixth-color);
+}
+
+.btn-primary {
+    background-color: var(--btn-primary) !important;
+    border-color: inherit;
+    outline: inherit;
+}
+
+.btn-primary:hover {
+    background-color: var(--fourth-color) !important;
+    border-color: inherit;
+    outline: inherit;
+}
+
+.btn-secondary {
+    background-color: var(--second-color) !important;
+    border-color: inherit;
+    outline: inherit;
+}
+
+.btn-secondary:hover {
+    background-color: #fd955c !important;
+    outline: inherit;
+    border-color: inherit;
+}
+
+.light-bg {
+    background-color: var(--light-bg-color);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-text {
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+}
+
+.navbar-brand {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+}
+
+.navbar-brand:hover {
+    color: var(--secondary-font);
+}
+
+.card {
+    transition: all 0.2s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        transition: none;
+    }
+    .card:hover {
+        transform: none;
+    }
+}
+
+.card-img-top {
+    border-radius: 10px;
+}
+
+#articles-preview .card {
+    background-color: inherit;
+    border: none;
+}
+
+#popular-recipes .card {
+    background-color: inherit;
+    border: none;
+}
+
+.subscribe-text {
+    width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    .subscribe-text {
+        width: 100%;
+    }
+}
+
+#about img {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    #about .about-text {
+        text-align: center;
+        padding-top: 2rem;
+    }
+}
+
+#footer i {
+    font-size: 2rem;
+}
+
+#footer i:hover {
+    color: var(--fourth-color) !important;
+}
+
+/* Recipe Page Styling */
+#recipe .card {
+    border: none;
+}
+
+#recipe img {
+    border-radius: 15px;
+}
+
+.recipe-overview li {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    column-gap: 1rem;
+}
+
+.recipe-overview li > i {
+    margin-top: 0.2rem;
+    font-size: 2rems;
+}
+
+.recipe-category-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5rem;
+    list-style-type: none;
+}
+
+.ingredients-list {
+    list-style-type: none;
+}
+
+.ingredients-list .ingredient {
+    margin: 2rem 0;
+}
+
+.prep-instruction {
+    margin: 2rem 0;
+}
+
+/* Articles page */
+#articles-page .card {
+    border: none;
+}
+
+#articles-page .row {
+    row-gap: 2rem;
 }
